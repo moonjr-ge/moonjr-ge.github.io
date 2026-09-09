@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gezi Portfolio</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="desktop">
+    <button class="desktop-icon icon-work" data-window="work-window">
+      <img src="./assets/icon-work.png" alt="Work" class="icon-img" />
+      <span class="icon-label">WORK</span>
+    </button>
+
+    <button class="desktop-icon icon-about" data-window="about-window">
+      <img src="./assets/icon-about_me.png" alt="About me" class="icon-img" />
+      <span class="icon-label">ABOUT ME</span>
+    </button>
+
+    <button class="desktop-icon icon-contact" data-window="contact-window">
+      <img src="./assets/icon-contact.png" alt="Contact" class="icon-img" />
+      <span class="icon-label">CONTACT</span>
+    </button>
+
+    <section class="window is-open" id="work-window">
+      <header class="window-titlebar">
+        <button class="window-close" aria-label="Close">×</button>
+        <button class="window-minimize" aria-label="Minimize">−</button>
+        <span class="window-title">WORK</span>
+      </header>
+
+      <div class="window-content work-content">
+        <div class="work-layout">
+          <aside class="work-profile">
+            <div class="profile-avatar">
+              <img src="./assets/icon-about_me.png" alt="Me" />
+            </div>
+
+            <p>6 POSTS</p>
+            <p>666 FOLLOWERS</p>
+          </aside>
+
+          <div class="work-grid">
+            <article class="work-card" data-window="work1-detail-window" role="button" tabindex="0">
+              <video class="work-media" autoplay muted loop playsinline>
+                <source src="./assets/work_1_cover.MP4" type="video/mp4" />
+              </video>
+              <h2>WORK 1</h2>
+              <p>#3D_SCULPTURE</p>
+            </article>
+
+            <article class="work-card" data-window="game-detail-window" role="button" tabindex="0">
+              <img src="./assets/organ_kiosk_cover.gif" alt="Organ Kiosk" class="work-media" />
+              <h2>ORGAN KIOSK</h2>
+              <p>#GAME</p>
+            </article>
+
+            <article class="work-card" data-window="crane-detail-window" role="button" tabindex="0">
+              <img src="./assets/crane_machine_cover.GIF" alt="Crane Machine" class="work-media" />
+              <h2>ORGAN SHOP</h2>
+              <p>#CRANE_MACHINE_GAME</p>
+            </article>
+
+            <article class="work-card" data-window="organ-shop-detail-window" role="button" tabindex="0">
+              <img src="./assets/organ_shop_cover.png" alt="Organ Shop" class="work-media" />
+              <h2>ORGAN SHOP</h2>
+              <p>#PIXEL_WORLD</p>
+            </article>
+
+            <article class="work-card" data-window="work2-detail-window" role="button" tabindex="0">
+              <video class="work-media" autoplay muted loop playsinline>
+                <source src="./assets/work_2_cover.MP4" type="video/mp4" />
+              </video>
+              <h2>WORK 2</h2>
+              <p>#CHINESE_ZODIAC</p>
+            </article>
+
+            <article class="work-card" data-window="work3-detail-window" role="button" tabindex="0">
+              <video class="work-media" autoplay muted loop playsinline>
+                <source src="./assets/work_3_cover.MP4" type="video/mp4" />
+              </video>
+              <h2>WORK 3</h2>
+              <p>#RABBIT</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="window" id="about-window">
+      <header class="window-titlebar">
+        <button class="window-close" aria-label="Close">×</button>
+        <button class="window-minimize" aria-label="Minimize">−</button>
+        <span class="window-title">ABOUT ME</span>
+      </header>
+
+      <div class="window-content">
+        <h1>PROFILE/</h1>
+        <p class="input-line">GE://ARCHIVE</p>
+        <p>
+          Welcome. This is an evolving collection of 3D worlds, animations,
+          and interactive experiments.
+        </p>
+      </div>
+    </section>
+
+    <section class="window" id="contact-window">
+      <header class="window-titlebar">
+        <button class="window-close" aria-label="Close">×</button>
+        <button class="window-minimize" aria-label="Minimize">−</button>
+        <span class="window-title">CONTACT</span>
+      </header>
+
+      <div class="window-content">
+        <h1>CONTACT</h1>
+        <p class="input-line">GE://CONNECT</p>
+        <p>Email / Instagram / portfolio links can go here.</p>
+      </div>
+    </section>
+
+    <section class="window detail-window" id="work1-detail-window">
+      <header class="window-titlebar">
+        <button class="window-close" aria-label="Close">×</button>
+        <button class="window-minimize" aria-label="Minimize">−</button>
+        <span class="window-title">WORK 1</span>
+      </header>
+
+      <div class="window-content detail-content">
+        <h1>WORK 1</h1>
+        <video class="detail-media" autoplay muted loop playsinline>
+          <source src="./assets/work_1_cover.MP4" type="video/mp4" />
+        </video>
+        <p>#3D_SCULPTURE</p>
+      </div>
+    </section>
+
+    <section class="window detail-window" id="game-detail-window">
+      <header class="window-titlebar">
+        <button class="window-close" aria-label="Close">×</button>
+        <button class="window-minimize" aria-label="Minimize">−</button>
+        <span class="window-title">ORGAN KIOSK</span>
+      </header>
+
+      <div class="window-content detail-content">
+        <div class="detail-hero">
+          <h1>ORGAN KIOSK</h1>
+          <p class="detail-tag">#GAME</p>
+        </div>
+
+        <img src="./assets/organ_kiosk_cover.gif" alt="Organ Kiosk" class="detail-media detail-media-main" />
+
+        <div class="detail-info">
+          <div>
+            <h2>TYPE</h2>
+            <p>Interactive Game</p>
+          </div>
+
+          <div>
+            <h2>ROLE</h2>
+            <p>Visual Design / 3D / Interaction</p>
+          </div>
+
+          <div>
+            <h2>YEAR</h2>
+            <p>2026</p>
+          </div>
+        </div>
+
+        <div class="detail-description">
+          <p>
+            ORGAN KIOSK is a playful interactive project built around a strange
+            vending-machine-like world. The page will later include process
+            images, interaction details, and final gameplay documentation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="window detail-window" id="crane-detail-window">
+      <header class="window-titlebar">
+        <button class="window-close" aria-label="Close">×</button>
+        <button class="window-minimize" aria-label="Minimize">−</button>
+        <span class="window-title">ORGAN SHOP</span>
+      </header>
+
+      <div class="window-content detail-content">
+        <h1>ORGAN SHOP</h1>
+        <img src="./assets/crane_machine_cover.GIF" alt="Crane Machine" class="detail-media" />
+        <p>#CRANE_MACHINE_GAME</p>
+      </div>
+    </section>
+
+    <section class="window detail-window" id="organ-shop-detail-window">
+      <header class="window-titlebar">
+        <button class="window-close" aria-label="Close">×</button>
+        <button class="window-minimize" aria-label="Minimize">−</button>
+        <span class="window-title">ORGAN SHOP</span>
+      </header>
+
+      <div class="window-content detail-content">
+        <h1>ORGAN SHOP</h1>
+        <img src="./assets/organ_shop_cover.png" alt="Organ Shop" class="detail-media" />
+        <p>#PIXEL_WORLD</p>
+      </div>
+    </section>
+
+    <section class="window detail-window" id="work2-detail-window">
+      <header class="window-titlebar">
+        <button class="window-close" aria-label="Close">×</button>
+        <button class="window-minimize" aria-label="Minimize">−</button>
+        <span class="window-title">WORK 2</span>
+      </header>
+
+      <div class="window-content detail-content">
+        <h1>WORK 2</h1>
+        <video class="detail-media" autoplay muted loop playsinline>
+          <source src="./assets/work_2_cover.MP4" type="video/mp4" />
+        </video>
+        <p>#CHINESE_ZODIAC</p>
+      </div>
+    </section>
+
+    <section class="window detail-window" id="work3-detail-window">
+      <header class="window-titlebar">
+        <button class="window-close" aria-label="Close">×</button>
+        <button class="window-minimize" aria-label="Minimize">−</button>
+        <span class="window-title">WORK 3</span>
+      </header>
+
+      <div class="window-content detail-content">
+        <h1>WORK 3</h1>
+        <video class="detail-media" autoplay muted loop playsinline>
+          <source src="./assets/work_3_cover.MP4" type="video/mp4" />
+        </video>
+        <p>#RABBIT</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
