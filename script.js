@@ -1,5 +1,6 @@
 const openTriggers = document.querySelectorAll("[data-window]");
 const windows = document.querySelectorAll(".window");
+const statusClock = document.querySelector(".status-clock");
 
 let topZIndex = 10;
 
@@ -75,3 +76,18 @@ function startDragging(event, windowElement) {
   window.addEventListener("pointermove", moveWindow);
   window.addEventListener("pointerup", stopDragging);
 }
+
+function updateClock() {
+  if (!statusClock) {
+    return;
+  }
+
+  const now = new Date();
+  const hours = String(now.getHours()).padStart(2, "0");
+  const minutes = String(now.getMinutes()).padStart(2, "0");
+
+  statusClock.textContent = `${hours}:${minutes}`;
+}
+
+updateClock();
+setInterval(updateClock, 1000);
