@@ -23,7 +23,7 @@
       <span class="icon-label">CONTACT</span>
     </button>
 
-    <section class="window is-open" id="work-window">
+    <section class="window" id="work-window">
       <header class="window-titlebar">
         <button class="window-close" aria-label="Close">×</button>
         <button class="window-minimize" aria-label="Minimize">−</button>
@@ -34,11 +34,11 @@
         <div class="work-layout">
           <aside class="work-profile">
             <div class="profile-avatar">
-              <img src="./assets/icon-about_me.png" alt="Me" />
+              <img src="./assets/work_page_avatar.png" alt="Me" />
             </div>
 
-            <p>6 POSTS</p>
-            <p>666 FOLLOWERS</p>
+            <p class="profile-posts"><span>6</span> POSTS</p>
+            <p><span>666</span> FOLLOWERS</p>
           </aside>
 
           <div class="work-grid">
@@ -65,7 +65,7 @@
             <article class="work-card" data-window="organ-shop-detail-window" role="button" tabindex="0">
               <img src="./assets/organ_shop_cover.png" alt="Organ Shop" class="work-media" />
               <h2>ORGAN SHOP</h2>
-              <p>#PIXEL_WORLD</p>
+              <p>#VIRTUAL_E_SHOP</p>
             </article>
 
             <article class="work-card" data-window="work2-detail-window" role="button" tabindex="0">
@@ -73,7 +73,7 @@
                 <source src="./assets/work_2_cover.mp4" type="video/mp4" />
               </video>
               <h2>WORK 2</h2>
-              <p>#CHINESE_ZODIAC</p>
+              <p>#3D_SCULPTURE</p>
             </article>
 
             <article class="work-card" data-window="work3-detail-window" role="button" tabindex="0">
@@ -81,9 +81,11 @@
                 <source src="./assets/work_3_cover.mp4" type="video/mp4" />
               </video>
               <h2>WORK 3</h2>
-              <p>#RABBIT</p>
+              <p>#3D_SCULPTURE</p>
             </article>
           </div>
+
+          <p class="work-ending">TO BE CONTINUE · · ·</p>
         </div>
       </div>
     </section>
@@ -95,13 +97,106 @@
         <span class="window-title">ABOUT ME</span>
       </header>
 
-      <div class="window-content">
-        <h1>PROFILE/</h1>
-        <p class="input-line">GE://ARCHIVE</p>
-        <p>
-          Welcome. This is an evolving collection of 3D worlds, animations,
-          and interactive experiments.
-        </p>
+      <div class="window-content about-content">
+        <div class="about-layout">
+          <section class="about-info-panel">
+            <div class="about-player" data-music-player>
+              <audio preload="metadata">
+                <source src="./assets/music/PlayList_01.mp3" type="audio/mpeg" />
+                <source src="./assets/music/PlayList_02.mp3" type="audio/mpeg" />
+                <source src="./assets/music/PlayList_03.ogg" type="audio/ogg" />
+                <source src="./assets/music/PlayList_04.mp3" type="audio/mpeg" />
+              </audio>
+              <div class="player-pad">
+                <button class="player-button player-prev" type="button" aria-label="Previous track">◀</button>
+                <button class="player-button player-play is-playing" type="button" aria-label="Play music"></button>
+                <button class="player-button player-next" type="button" aria-label="Next track">▶</button>
+              </div>
+              <div class="player-screen">
+                <p class="player-track">PLAYLIST 01</p>
+                <div class="player-progress">
+                  <span></span>
+                </div>
+                <p class="player-time">0:00</p>
+              </div>
+            </div>
+
+            <div class="about-field">
+              <span>USER ID/</span>
+              <strong>GE XIAO</strong>
+            </div>
+            <div class="about-field">
+              <span>MEMBER SINCE/</span>
+              <strong>18/07/00</strong>
+            </div>
+            <div class="about-field">
+              <span>STATUS/</span>
+              <strong>ONLINE</strong>
+            </div>
+            <div class="about-field">
+              <span>LOCATION/</span>
+              <strong>GERMANY</strong>
+            </div>
+            <div class="about-field">
+              <span>MBTI/</span>
+              <strong>INTP</strong>
+            </div>
+          </section>
+
+          <section class="about-profile-panel">
+            <div class="about-profile-heading">
+              <h1><span>ABOUT ME</span></h1>
+              <div class="about-avatar-frame text-frame-style">
+                <img src="./assets/about_me_avatar.gif" alt="Gezi avatar" />
+              </div>
+            </div>
+            <div class="about-tags-frame text-frame-style">
+              <div class="about-tags">
+                <div class="about-tag-row">
+                  <span class="tag-primary">#TAGS</span>
+                  <span class="tag-purple">#ANIMATION</span>
+                </div>
+                <div class="about-tag-row about-tag-row-right">
+                  <span class="tag-purple">#3D_SCULPTURE</span>
+                </div>
+                <div class="about-tag-row">
+                  <span>#DIGITAL_ART</span>
+                  <span class="tag-blue">#HFG</span>
+                </div>
+                <div class="about-tag-row">
+                  <span class="tag-purple">#META_HUMAN</span>
+                </div>
+                <div class="about-tag-row">
+                  <span class="tag-purple">#GAME</span>
+                  <span>#PIXEL_ART</span>
+                </div>
+                <div class="about-tag-row">
+                  <span>#3D_DESIGN</span>
+                  <span class="tag-blue">#CAFA</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="about-message-panel">
+            <div class="about-message-box text-frame-style">
+              <p>GE://ARCHIVE:</p>
+              <p>Welcome.</p>
+              <p>
+                Welcome. This is an evolving collection of 3D worlds,
+                animations, and interactive experiments. I explore the
+                relationship between objects, movement, space, and digital
+                experiences. Everything here is built somewhere between
+                nostalgia, technology, and imagination.
+              </p>
+              <p>&gt; ENTER</p>
+            </div>
+            <div class="about-actions">
+              <a href="mailto:hello@example.com">EDIT</a>
+              <a href="https://www.instagram.com/" target="_blank" rel="noreferrer"><span class="save-label">SAVE</span></a>
+            </div>
+          </section>
+        </div>
       </div>
     </section>
 
@@ -112,10 +207,23 @@
         <span class="window-title">CONTACT</span>
       </header>
 
-      <div class="window-content">
-        <h1>CONTACT</h1>
-        <p class="input-line">GE://CONNECT</p>
-        <p>Email / Instagram / portfolio links can go here.</p>
+      <div class="window-content contact-content">
+        <div class="contact-card">
+          <div class="contact-row">
+            <img src="./assets/email_logo.png" alt="Email" />
+            <div class="contact-info">
+              <span>E-MAIL/</span>
+              <a class="text-frame-style" href="mailto:geziziziiii@gmail.com">geziziziiii@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-row">
+            <img src="./assets/insta_logo.png" alt="Instagram" />
+            <div class="contact-info">
+              <span>INSTAGRAM/</span>
+              <a class="text-frame-style" href="https://www.instagram.com/moonjr.cc" target="_blank" rel="noreferrer">@moonjr.cc</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -131,7 +239,7 @@
           <h1>WORK 1</h1>
           <p class="detail-slashes">///</p>
 
-          <div class="detail-description-box">
+          <div class="detail-description-box text-frame-style">
             <p>GE://WORK_1:</p>
             <p>Project description will be added here.</p>
             <p>
@@ -141,9 +249,14 @@
           </div>
 
           <div class="detail-tags">
-            <span>#3D</span>
-            <span>#SCULPTURE</span>
-            <span>#VIDEO</span>
+            <div class="tag-row">
+              <span>#BLENDER</span>
+              <span>#3DSCLUPTURE</span>
+            </div>
+            <div class="tag-row">
+              <span>#CHINESE ZODIAC</span>
+              <span>#RABBIT</span>
+            </div>
           </div>
         </aside>
 
@@ -177,7 +290,7 @@
           <h1>ORGAN KIOSK</h1>
           <p class="detail-slashes">///</p>
 
-          <div class="detail-description-box">
+          <div class="detail-description-box text-frame-style">
             <p>GE://ORGAN_KIOSK:</p>
             <p>Welcome to ORGAN KIOSK!</p>
             <p>
@@ -188,10 +301,14 @@
           </div>
 
           <div class="detail-tags">
-            <span>#GODOT</span>
-            <span>#PIXEL</span>
-            <span>#GAME</span>
-            <span class="tag-wide">#HUMAN BODY MODIFICATION</span>
+            <div class="tag-row">
+              <span>#GODOT</span>
+              <span>#GAME</span>
+              <span>#PIXEL</span>
+            </div>
+            <div class="tag-row">
+              <span class="tag-full">#HUMAN BODY MODIFICATION</span>
+            </div>
           </div>
         </aside>
 
@@ -227,7 +344,7 @@
           <h1>ORGAN SHOP</h1>
           <p class="detail-slashes">///</p>
 
-          <div class="detail-description-box">
+          <div class="detail-description-box text-frame-style">
             <p>GE://CRANE_MACHINE:</p>
             <p>Project description will be added here.</p>
             <p>
@@ -237,17 +354,22 @@
           </div>
 
           <div class="detail-tags">
-            <span>#GAME</span>
-            <span>#PIXEL</span>
-            <span>#ARCADE</span>
-            <span class="tag-wide">#CRANE_MACHINE_GAME</span>
+            <div class="tag-row tag-row-tight">
+              <span>#ORGANS</span>
+              <span>#GAME</span>
+            </div>
+            <div class="tag-row">
+              <span class="tag-full">#HUMAN BODY MODIFICATION</span>
+            </div>
           </div>
         </aside>
 
         <div class="detail-gallery">
-          <img src="./assets/crane_machine_detail_01.gif" alt="Crane Machine detail 01" class="detail-media" />
+          <div class="detail-media-row crane-machine-row">
+            <img src="./assets/crane_machine_detail_01.gif" alt="Crane Machine detail 01" class="detail-media" />
 
-          <img src="./assets/crane_machine_detail_02.gif" alt="Crane Machine detail 02" class="detail-media" />
+            <img src="./assets/crane_machine_detail_02.gif" alt="Crane Machine detail 02" class="detail-media" />
+          </div>
 
           <img src="./assets/crane_machine_detail_03.png" alt="Crane Machine detail 03" class="detail-media" />
 
@@ -268,7 +390,7 @@
           <h1>ORGAN SHOP</h1>
           <p class="detail-slashes">///</p>
 
-          <div class="detail-description-box">
+          <div class="detail-description-box text-frame-style">
             <p>GE://ORGAN_SHOP:</p>
             <p>Project description will be added here.</p>
             <p>
@@ -278,10 +400,13 @@
           </div>
 
           <div class="detail-tags">
-            <span>#PIXEL</span>
-            <span>#WORLD</span>
-            <span>#SHOP</span>
-            <span class="tag-wide">#PIXEL_WORLD</span>
+            <div class="tag-row">
+              <span>#VIRTUAL E-SHOP</span>
+              <span>#ORGANS</span>
+            </div>
+            <div class="tag-row">
+              <span class="tag-full">#HUMAN BODY MODIFICATION</span>
+            </div>
           </div>
         </aside>
 
@@ -313,7 +438,7 @@
           <h1>WORK 2</h1>
           <p class="detail-slashes">///</p>
 
-          <div class="detail-description-box">
+          <div class="detail-description-box text-frame-style">
             <p>GE://WORK_2:</p>
             <p>Project description will be added here.</p>
             <p>
@@ -323,10 +448,14 @@
           </div>
 
           <div class="detail-tags">
-            <span>#3D</span>
-            <span>#ZODIAC</span>
-            <span>#VIDEO</span>
-            <span class="tag-wide">#CHINESE_ZODIAC</span>
+            <div class="tag-row">
+              <span>#BLENDER</span>
+              <span>#3DSCLUPTURE</span>
+            </div>
+            <div class="tag-row">
+              <span>#CHINESE ZODIAC</span>
+              <span>#GOAT</span>
+            </div>
           </div>
         </aside>
 
@@ -360,7 +489,7 @@
           <h1>WORK 3</h1>
           <p class="detail-slashes">///</p>
 
-          <div class="detail-description-box">
+          <div class="detail-description-box text-frame-style">
             <p>GE://WORK_3:</p>
             <p>Project description will be added here.</p>
             <p>
@@ -370,9 +499,14 @@
           </div>
 
           <div class="detail-tags">
-            <span>#3D</span>
-            <span>#RABBIT</span>
-            <span>#VIDEO</span>
+            <div class="tag-row">
+              <span>#BLENDER</span>
+              <span>#3DSCLUPTURE</span>
+            </div>
+            <div class="tag-row">
+              <span>#CHINESE ZODIAC</span>
+              <span>#PIG</span>
+            </div>
           </div>
         </aside>
 
