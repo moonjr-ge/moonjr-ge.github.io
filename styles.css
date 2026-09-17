@@ -648,7 +648,10 @@ button {
 .about-actions a,
 .about-actions .about-action {
   flex: 1;
+  display: block;
+  border: 0;
   padding: 8px 0;
+  appearance: none;
   background: #fff4fe;
   color: #ab348d;
   font-size: 30px;
