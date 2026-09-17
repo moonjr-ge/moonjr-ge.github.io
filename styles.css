@@ -1241,3 +1241,18 @@ button {
     grid-template-columns: 1fr;
   }
 }
+
+html,
+body,
+.desktop,
+.window-titlebar {
+  cursor: url("./assets/cursor_default_web.png") 0 0, auto;
+}
+
+button,
+a,
+.desktop-icon,
+.work-card,
+.about-tag-row > span {
+  cursor: url("./assets/cursor_pointer_web.png") 6 1, pointer;
+}
