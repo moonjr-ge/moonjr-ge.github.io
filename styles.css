@@ -535,7 +535,8 @@ button {
   justify-content: flex-end;
 }
 
-.about-tags span {
+.about-tag-row > span {
+  position: relative;
   padding: 3px 16px;
   background: #fff4fe;
   color: #ab348d;
@@ -581,6 +582,56 @@ button {
     inset 4px 0 0 #f4edff,
     inset 0 -4px 0 #cab3f4,
     inset -4px 0 0 #cab3f4;
+}
+
+.about-tags .tag-tooltip {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 8px);
+  z-index: 20;
+  width: max-content;
+  max-width: 290px;
+  padding: 8px 10px;
+  visibility: hidden;
+  background: #ffffff;
+  color: #2c008a;
+  font-family: "TextFont01", monospace;
+  font-size: 12px;
+  line-height: 1.4;
+  letter-spacing: 0;
+  text-align: left;
+  text-decoration: none;
+  white-space: normal;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 4px);
+  box-shadow:
+    inset 0 4px 0 #e9b6dc,
+    inset 4px 0 0 #e9b6dc,
+    inset 0 -4px 0 #fff4fe,
+    inset -4px 0 0 #fff4fe;
+  transition:
+    opacity 120ms linear,
+    transform 120ms linear,
+    visibility 120ms linear;
+}
+
+.about-tags .tag-tooltip strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #ff00bf;
+  font-weight: 700;
+}
+
+.about-tags .tag-tooltip strong:only-child {
+  margin-bottom: 0;
+}
+
+.about-tag-row > span:hover .tag-tooltip,
+.about-tag-row > span:focus-visible .tag-tooltip {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, 0);
 }
 
 .about-message-panel {
