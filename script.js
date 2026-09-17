@@ -60,7 +60,22 @@ function openWindow(windowId) {
   if (targetWindow) {
     targetWindow.classList.add("is-open");
     bringToFront(targetWindow);
+    showInitialScrollLogos(targetWindow);
   }
+}
+
+function showInitialScrollLogos(windowElement) {
+  const scrollTargets = windowElement.querySelectorAll(".zodiac-description-box, .detail-gallery");
+
+  scrollTargets.forEach((scrollTarget) => {
+    scrollTarget.classList.remove("scroll-logo-visible");
+    void scrollTarget.offsetWidth;
+    scrollTarget.classList.add("scroll-logo-visible");
+
+    setTimeout(() => {
+      scrollTarget.classList.remove("scroll-logo-visible");
+    }, 2000);
+  });
 }
 
 function bringToFront(windowElement) {

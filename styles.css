@@ -16,8 +16,18 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "ChinesePixel";
+  src: url("./assets/fonts/tianwangxingxiangsu.ttf") format("truetype");
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box;
+}
+
+.zh {
+  font-family: "ChinesePixel", "TitleFont01", monospace;
 }
 
 body {
@@ -616,6 +626,19 @@ button {
   margin-bottom: 0;
 }
 
+.about-message-box .about-bgm-credit {
+  margin-top: 44px;
+  font-size: 10px;
+}
+
+.about-message-box .about-bgm-credit a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
 .about-actions {
   display: flex;
   gap: 16px;
@@ -831,6 +854,23 @@ button {
   letter-spacing: 1px;
 }
 
+.work-card.zodiac-card h2 {
+  font-size: 47px;
+}
+
+.work-card.zodiac-card {
+  --dot-color: #df1818;
+}
+
+.work-card:not(.zodiac-card) {
+  --dot-color: #45e5d0;
+}
+
+.zodiac-title-main,
+.zodiac-title-sub {
+  display: block;
+}
+
 .work-card h2::before {
   content: "";
   position: absolute;
@@ -938,6 +978,18 @@ button {
   white-space: nowrap;
 }
 
+.zodiac-detail-title-main,
+.zodiac-detail-title-sub {
+  display: block;
+}
+
+#work1-detail-window .detail-sidebar h1,
+#work2-detail-window .detail-sidebar h1,
+#work3-detail-window .detail-sidebar h1 {
+  font-size: 43px;
+  transform: translateY(-10px);
+}
+
 .detail-slashes {
   margin: 0;
   color: #8186b9;
@@ -951,6 +1003,69 @@ button {
 .detail-description-box {
   margin: auto 0;
   padding: 6px;
+}
+
+.zodiac-description-box {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.zodiac-description-box::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  box-shadow:
+    inset 0 5px 0 #e9b6dc,
+    inset 5px 0 0 #e9b6dc,
+    inset 0 -5px 0 #fff4fe,
+    inset -5px 0 0 #fff4fe;
+}
+
+.zodiac-description-scroll {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.zodiac-description-box.scroll-logo-visible::before,
+.detail-gallery.scroll-logo-visible::before {
+  content: "";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  z-index: 4;
+  width: 52px;
+  height: 72px;
+  background: url("./assets/scroll_logo.png") center / contain no-repeat;
+  image-rendering: pixelated;
+  pointer-events: none;
+  transform: translateY(-50%);
+  animation: scrollLogoFade 2s ease-in-out forwards;
+}
+
+.detail-gallery.scroll-logo-visible::before {
+  right: 24px;
+  width: 104px;
+  height: 144px;
+}
+
+@keyframes scrollLogoFade {
+  0% {
+    opacity: 0;
+  }
+
+  20%,
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 .detail-description-box p {
@@ -1027,6 +1142,7 @@ button {
 }
 
 .detail-gallery {
+  position: relative;
   height: 100%;
   padding: 34px 28px 34px 24px;
   overflow-y: auto;
