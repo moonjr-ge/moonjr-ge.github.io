@@ -645,7 +645,8 @@ button {
   transform: translateY(-10px);
 }
 
-.about-actions a {
+.about-actions a,
+.about-actions .about-action {
   flex: 1;
   padding: 8px 0;
   background: #fff4fe;
