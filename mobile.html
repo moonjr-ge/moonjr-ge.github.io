@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Gezi Portfolio — Mobile</title>
+  <link rel="stylesheet" href="./mobile.css" />
+</head>
+<body>
+  <main class="phone-shell is-home">
+    <header class="phone-statusbar" aria-label="Phone status">
+      <div class="phone-status-left">
+        <img src="./assets/phone_signal.png" alt="" />
+        <img src="./assets/phone_message.png" alt="" />
+      </div>
+      <img class="phone-battery" src="./assets/phone_battery.png" alt="Battery" />
+    </header>
+
+    <section class="phone-view phone-home-view is-active" data-view="home">
+      <img class="phone-kira" src="./assets/phone_bg_kira.png" alt="" />
+      <div class="phone-home-center">
+        <p class="phone-welcome">WELCOME! :)</p>
+        <time class="phone-clock" aria-label="Current time">10:31</time>
+
+        <div class="phone-player" data-mobile-player>
+          <audio preload="metadata" src="./assets/music/PlayList_01.mp3"></audio>
+          <img src="./assets/music_player.png" alt="Music player" />
+          <img class="phone-player-button-bg" src="./assets/playbutton.png" alt="" />
+          <div class="phone-player-controls">
+            <button class="phone-player-button phone-player-prev" type="button" data-player-prev aria-label="Previous track">◀</button>
+            <button class="phone-player-button phone-player-play" type="button" data-player-toggle aria-label="Play music"></button>
+            <button class="phone-player-button phone-player-next" type="button" data-player-next aria-label="Next track">▶</button>
+          </div>
+          <div class="phone-player-screen">
+            <strong data-player-title>PLAYLIST 01</strong>
+            <div class="phone-player-progress" aria-hidden="true"><span></span></div>
+            <span data-player-time>0:00</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="phone-launcher" aria-label="Main navigation">
+        <img class="phone-launcher-bg" src="./assets/phone_homepage_icon_bg.png" alt="" />
+        <button type="button" data-route="work">
+          <img src="./assets/icon-work.png" alt="" />
+          <span>WORK</span>
+        </button>
+        <button type="button" data-route="about">
+          <img src="./assets/icon-about_me.png" alt="" />
+          <span>ABOUT ME</span>
+        </button>
+        <button type="button" data-route="contact">
+          <img src="./assets/icon-contact.png" alt="" />
+          <span>CONTACT</span>
+        </button>
+      </nav>
+    </section>
+
+    <section class="phone-view phone-work-view" data-view="work">
+      <div class="phone-scroll-content phone-work-content">
+        <header class="phone-profile">
+          <img src="./assets/work_page_avatar.png" alt="Gezi" />
+          <p><strong>6</strong> POSTS</p>
+          <p><strong>666</strong> FOLLOWERS</p>
+        </header>
+        <div class="phone-work-scroll">
+          <div class="phone-work-list" data-work-list></div>
+          <p class="phone-continuation">TO BE CONTINUE · · ·</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="phone-view phone-about-view" data-view="about">
+      <div class="phone-scroll-content">
+        <section class="phone-about-card">
+          <img class="phone-about-card-bg" src="./assets/phone_about_me_card_bg.png" alt="" />
+          <h1>PERSONAL PROFILE·ABOUT ME</h1>
+          <dl>
+            <div><dt>USER ID/</dt><dd>GE XIAO</dd></div>
+            <div><dt>MEMBER SINCE/</dt><dd>18/07/00</dd></div>
+            <div><dt>STATUS/</dt><dd>ONLINE</dd></div>
+            <div><dt>LOCATION/</dt><dd>GERMANY</dd></div>
+            <div><dt>MBTI/</dt><dd>INTP</dd></div>
+          </dl>
+          <img class="phone-about-avatar" src="./assets/about_me_avatar.png" alt="Gezi avatar" />
+          <p class="phone-about-name">//個人档案//</p>
+        </section>
+
+        <div class="phone-about-divider" aria-hidden="true">
+          <span>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span><span>////////////////////</span><span>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+        </div>
+
+        <div class="phone-archive-row">
+          <div class="phone-about-scrollbar" data-about-scrollbar><span></span></div>
+          <div class="phone-archive-frame">
+            <section class="phone-archive" data-about-archive>
+              <h2>GE://ARCHIVE:</h2>
+              <p>Welcome.</p>
+              <p>This is an evolving collection of 3D worlds, animations, and interactive experiments. I explore the relationship between objects, movement, space, and digital experiences. Everything here is built somewhere between nostalgia, technology, and imagination.</p>
+              <p class="phone-archive-enter">&gt; ENTER</p>
+            </section>
+          </div>
+        </div>
+
+        <div class="phone-about-tags">
+          <div><span class="tag-pink">#TAGS</span><span class="tag-purple">#ANIMATION</span><span class="tag-blue">#HFG</span></div>
+          <div><span>#PIXEL_ART</span><span class="tag-purple">#3D_SCULPTURE</span></div>
+          <div><span class="tag-purple">#META_HUMAN</span><span>#DIGITAL_ART</span></div>
+          <div><span class="tag-purple">#3D_DESIGN</span><span class="tag-purple">#GAME</span><span class="tag-blue">#CAFA</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="phone-view phone-contact-view" data-view="contact">
+      <div class="phone-scroll-content phone-contact-content">
+        <section class="phone-contact-card">
+          <img class="phone-contact-bg" src="./assets/phone_contact_bg.png" alt="" />
+          <h1>CONTACT ME !</h1>
+          <div class="phone-contact-item">
+            <img src="./assets/email_logo.png" alt="Email" />
+            <p><span>EMAIL/</span><a href="mailto:geziziziiii@gmail.com">geziziziiii@gmail.com</a></p>
+          </div>
+          <div class="phone-contact-item">
+            <img src="./assets/insta_logo.png" alt="Instagram" />
+            <p><span>INSTAGRAM/</span><a href="https://www.instagram.com/moonjr.cc" target="_blank" rel="noreferrer">@moonjr.cc</a></p>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="phone-view phone-detail-view" data-view="detail">
+      <div class="phone-scroll-content phone-detail-content">
+        <div class="phone-detail-hero" data-detail-hero></div>
+        <div class="phone-detail-scrollbar phone-detail-scrollbar-x" data-detail-scrollbar-x><span></span></div>
+        <header class="phone-detail-heading">
+          <div>
+            <h1 data-detail-title></h1>
+            <p data-detail-code></p>
+          </div>
+          <span>///</span>
+        </header>
+        <div class="phone-detail-description-frame">
+          <section class="phone-detail-description" data-detail-description></section>
+        </div>
+        <div class="phone-detail-scrollbar phone-detail-scrollbar-y" data-detail-scrollbar-y><span></span></div>
+        <div class="phone-detail-tags" data-detail-tags></div>
+      </div>
+    </section>
+
+    <nav class="phone-bottom-nav" aria-label="Page navigation">
+      <button type="button" data-route="home" aria-label="Home">
+        <img src="./assets/phone_home.png" alt="" />
+      </button>
+      <button type="button" data-back aria-label="Back">
+        <img src="./assets/phone_return.png" alt="" />
+      </button>
+    </nav>
+  </main>
+
+  <script src="./mobile.js"></script>
+</body>
+</html>

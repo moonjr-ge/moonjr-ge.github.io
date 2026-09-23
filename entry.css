@@ -1,0 +1,135 @@
+@font-face {
+  font-family: "TitleFont01";
+  src: url("./assets/fonts/TitleFont_01.ttf") format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  color: #2c008a;
+  font-family: "TitleFont01", monospace;
+  background: #f4dff3 url("./assets/desktop-bg.png") center / cover fixed;
+  cursor: url("./assets/cursor_default_web.png") 0 0, auto;
+}
+
+.device-select {
+  display: grid;
+  min-height: 100dvh;
+  place-items: center;
+  padding: 24px;
+}
+
+.device-window {
+  width: min(620px, 100%);
+  border: 5px solid #424782;
+  background: #f3dff1;
+  box-shadow: 12px 12px 0 rgba(66, 71, 130, 0.35);
+}
+
+.device-titlebar {
+  position: relative;
+  display: flex;
+  min-height: 54px;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 5px solid #424782;
+  background: #d655b5;
+  box-shadow:
+    inset 0 5px 0 #ff7dde,
+    inset 5px 0 0 #ff7dde,
+    inset 0 -5px 0 #ab348d,
+    inset -5px 0 0 #ab348d;
+}
+
+.device-titlebar h1 {
+  margin: 0;
+  color: #2c008a;
+  font-size: clamp(23px, 5vw, 34px);
+  font-weight: 400;
+}
+
+.device-pixel-button {
+  position: absolute;
+  left: 13px;
+  width: 24px;
+  height: 24px;
+  background: #edcce8;
+  box-shadow:
+    inset 0 4px 0 #ffffff,
+    inset 4px 0 0 #ffffff,
+    inset 0 -4px 0 #ab348d,
+    inset -4px 0 0 #ab348d;
+}
+
+.device-content {
+  padding: 52px 44px 40px;
+  text-align: center;
+}
+
+.device-content p {
+  margin: 0 0 34px;
+  color: #ff00bf;
+  font-size: clamp(26px, 6vw, 42px);
+}
+
+.device-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.device-options a {
+  padding: 20px 10px;
+  color: #2c008a;
+  font-size: clamp(24px, 6vw, 38px);
+  text-decoration: none;
+  background: #fff4fe;
+  box-shadow:
+    inset 0 5px 0 #ffffff,
+    inset 5px 0 0 #ffffff,
+    inset 0 -5px 0 #e9b6dc,
+    inset -5px 0 0 #e9b6dc;
+  cursor: url("./assets/cursor_pointer_web.png") 6 1, pointer;
+}
+
+.device-options a:hover,
+.device-options a:focus-visible {
+  color: #ffffff;
+  background: #ff7dde;
+  outline: none;
+  box-shadow:
+    inset 0 5px 0 #fdaae8,
+    inset 5px 0 0 #fdaae8,
+    inset 0 -5px 0 #d655b5,
+    inset -5px 0 0 #d655b5;
+}
+
+.device-content small {
+  display: block;
+  margin-top: 30px;
+  color: #8186b9;
+  font-size: 15px;
+}
+
+@media (max-width: 520px) {
+  .device-select {
+    padding: 14px;
+  }
+
+  .device-content {
+    padding: 42px 18px 32px;
+  }
+
+  .device-options {
+    grid-template-columns: 1fr;
+  }
+}
