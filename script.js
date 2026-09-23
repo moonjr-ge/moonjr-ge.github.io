@@ -2,6 +2,7 @@ const openTriggers = document.querySelectorAll("[data-window]");
 const windows = document.querySelectorAll(".window");
 const statusClock = document.querySelector(".status-clock");
 const musicPlayer = document.querySelector("[data-music-player]");
+const desktopMusicToggle = document.querySelector("[data-desktop-music-toggle]");
 
 let topZIndex = 10;
 let currentTrackIndex = 0;
@@ -140,6 +141,17 @@ if (musicPlayer) {
   const trackLabel = musicPlayer.querySelector(".player-track");
   const timeLabel = musicPlayer.querySelector(".player-time");
   const progressBar = musicPlayer.querySelector(".player-progress span");
+  const desktopMusicIcon = desktopMusicToggle.querySelector("img");
+
+  function syncMusicControls(isPlaying) {
+    playButton.classList.toggle("is-playing", isPlaying);
+    playButton.setAttribute("aria-label", isPlaying ? "Pause music" : "Play music");
+    desktopMusicToggle.setAttribute("aria-label", isPlaying ? "Pause music" : "Play music");
+    desktopMusicToggle.setAttribute("aria-pressed", String(isPlaying));
+    desktopMusicIcon.src = isPlaying
+      ? "./assets/desktop_music_on.png"
+      : "./assets/desktop_music_off.png";
+  }
 
   function loadTrack(trackIndex) {
     const track = playlist[trackIndex];
@@ -154,14 +166,11 @@ if (musicPlayer) {
     audio.play().catch(() => {
       pauseTrack();
     });
-    playButton.classList.add("is-playing");
-    playButton.setAttribute("aria-label", "Pause music");
   }
 
   function pauseTrack() {
     audio.pause();
-    playButton.classList.remove("is-playing");
-    playButton.setAttribute("aria-label", "Play music");
+    syncMusicControls(false);
   }
 
   function changeTrack(direction) {
@@ -194,6 +203,14 @@ if (musicPlayer) {
     }
   });
 
+  desktopMusicToggle.addEventListener("click", () => {
+    if (audio.paused) {
+      playTrack();
+    } else {
+      pauseTrack();
+    }
+  });
+
   previousButton.addEventListener("click", () => {
     changeTrack(-1);
   });
@@ -215,12 +232,13 @@ if (musicPlayer) {
   });
 
   audio.addEventListener("pause", () => {
-    playButton.classList.remove("is-playing");
+    syncMusicControls(false);
   });
 
   audio.addEventListener("play", () => {
-    playButton.classList.add("is-playing");
+    syncMusicControls(true);
   });
 
   loadTrack(currentTrackIndex);
+  syncMusicControls(false);
 }
