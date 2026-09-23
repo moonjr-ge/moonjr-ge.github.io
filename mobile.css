@@ -25,6 +25,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Pixelify Sans";
+  src: url("./assets/fonts/PixelifySans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --phone-width: 375px;
   --status-height: 44px;
@@ -68,7 +76,8 @@ button {
 
 .phone-shell {
   position: relative;
-  width: min(100%, var(--phone-width));
+  width: 100%;
+  max-width: var(--phone-width);
   height: clamp(700px, 100dvh, 812px);
   min-height: 700px;
   max-height: 812px;
@@ -141,21 +150,23 @@ button {
 .phone-home-view::before {
   content: "";
   position: absolute;
-  left: -180px;
+  left: 50%;
   top: 0;
   width: 736px;
   height: 736px;
   background: url("./assets/phone_desktop.png") center / cover no-repeat;
+  transform: translateX(-50%);
   pointer-events: none;
   image-rendering: pixelated;
 }
 
 .phone-kira {
   position: absolute;
-  left: 53px;
+  left: 50%;
   top: 43px;
   width: 270px;
   height: 498px;
+  transform: translateX(-50%);
   object-fit: fill;
   pointer-events: none;
   image-rendering: pixelated;
@@ -163,8 +174,12 @@ button {
 
 .phone-home-center {
   position: absolute;
-  inset: 0;
+  top: 0;
+  bottom: 0;
+  left: 50%;
   z-index: 2;
+  width: min(100%, var(--phone-width));
+  transform: translateX(-50%);
 }
 
 .phone-welcome {
@@ -330,10 +345,11 @@ button {
 .phone-launcher {
   position: absolute;
   z-index: 3;
-  left: 15px;
+  left: 50%;
   bottom: 60px;
   width: 345px;
   height: 95px;
+  transform: translateX(-50%);
 }
 
 .phone-launcher-bg {
@@ -496,8 +512,10 @@ button {
 
 .phone-work-content {
   display: flex;
+  width: min(100%, var(--phone-width));
   height: calc(100% - var(--nav-height) - 12px);
   flex-direction: column;
+  margin: 0 auto;
   padding: 37px 12px 0;
   overflow: hidden;
 }
@@ -996,7 +1014,9 @@ button {
 
 .phone-about-view .phone-scroll-content {
   position: relative;
+  width: min(100%, var(--phone-width));
   height: calc(100% - var(--nav-height));
+  margin: 0 auto;
   padding: 0;
   overflow: hidden;
 }
@@ -1041,6 +1061,8 @@ button {
 
 .phone-contact-content {
   display: grid;
+  width: min(100%, var(--phone-width));
+  margin: 0 auto;
   place-items: center;
 }
 
@@ -1215,7 +1237,9 @@ button {
 
 .phone-detail-view.is-detail-layout .phone-detail-content {
   position: relative;
+  width: min(100%, var(--phone-width));
   height: calc(100% - var(--nav-height));
+  margin: 0 auto;
   padding: 0;
   overflow: hidden;
 }
@@ -1756,7 +1780,15 @@ button {
   grid-column: 1 / -1;
 }
 
-@media (min-width: 376px) {
+@media (max-width: 599px) {
+  .phone-shell {
+    height: 100dvh;
+    max-width: none;
+    max-height: none;
+  }
+}
+
+@media (min-width: 600px) {
   body {
     padding: 12px 0;
   }
