@@ -958,7 +958,7 @@ button {
   grid-template-columns: 139px 94px 94px;
 }
 
-.phone-about-tags span,
+.phone-about-tags > div > span,
 .phone-detail-tags span {
   padding: 4px 9px;
   color: #ab348d;
@@ -972,7 +972,8 @@ button {
     inset -4px 0 0 #e9b6dc;
 }
 
-.phone-about-tags span {
+.phone-about-tags > div > span {
+  position: relative;
   display: grid;
   width: 100%;
   height: 33.75px;
@@ -980,6 +981,77 @@ button {
   padding: 0;
   font-size: 28px;
   text-decoration-thickness: 1px;
+}
+
+.phone-about-tags > div > span[data-about-tag] {
+  cursor: pointer;
+}
+
+.phone-about-tags .phone-tag-tooltip {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  z-index: 30;
+  display: block;
+  width: max-content;
+  max-width: 320px;
+  padding: 8px 10px;
+  visibility: hidden;
+  opacity: 0;
+  color: #2c008a;
+  font-family: "TextFont01", monospace;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.3;
+  text-align: left;
+  text-decoration: none;
+  white-space: normal;
+  background: #ffffff;
+  transform: translate(-50%, 4px);
+  box-shadow:
+    inset 0 4px 0 #e9b6dc,
+    inset 4px 0 0 #e9b6dc,
+    inset 0 -4px 0 #fff4fe,
+    inset -4px 0 0 #fff4fe;
+  pointer-events: none;
+  transition:
+    opacity 120ms linear,
+    transform 120ms linear,
+    visibility 120ms linear;
+}
+
+.phone-about-tags .phone-tag-tooltip strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #ff00bf;
+  font-weight: 700;
+}
+
+.phone-about-tags .phone-tag-tooltip strong:only-child {
+  margin-bottom: 0;
+}
+
+.phone-about-tags > div > span:first-child .phone-tag-tooltip {
+  right: auto;
+  left: 0;
+  transform: translateY(4px);
+}
+
+.phone-about-tags > div > span:last-child .phone-tag-tooltip {
+  right: 0;
+  left: auto;
+  transform: translateY(4px);
+}
+
+.phone-about-tags > div > span.is-open .phone-tag-tooltip {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.phone-about-tags > div > span:first-child.is-open .phone-tag-tooltip,
+.phone-about-tags > div > span:last-child.is-open .phone-tag-tooltip {
+  transform: translateY(0);
 }
 
 .phone-about-tags .tag-purple {

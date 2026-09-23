@@ -146,7 +146,43 @@ const detailScrollbarX = document.querySelector("[data-detail-scrollbar-x]");
 const detailScrollbarY = document.querySelector("[data-detail-scrollbar-y]");
 const aboutArchive = document.querySelector("[data-about-archive]");
 const aboutScrollbar = document.querySelector("[data-about-scrollbar]");
+const mobileAboutTags = [...document.querySelectorAll("[data-about-tag]")];
 let currentView = "home";
+
+function closeMobileAboutTags(exceptTag = null) {
+  mobileAboutTags.forEach((tag) => {
+    if (tag === exceptTag) {
+      return;
+    }
+    tag.classList.remove("is-open");
+    tag.setAttribute("aria-expanded", "false");
+    tag.querySelector(".phone-tag-tooltip").setAttribute("aria-hidden", "true");
+  });
+}
+
+mobileAboutTags.forEach((tag) => {
+  function toggleTag() {
+    const shouldOpen = !tag.classList.contains("is-open");
+    closeMobileAboutTags(tag);
+    tag.classList.toggle("is-open", shouldOpen);
+    tag.setAttribute("aria-expanded", String(shouldOpen));
+    tag.querySelector(".phone-tag-tooltip").setAttribute("aria-hidden", String(!shouldOpen));
+  }
+
+  tag.addEventListener("click", (event) => {
+    event.stopPropagation();
+    toggleTag();
+  });
+
+  tag.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      toggleTag();
+    }
+  });
+});
+
+document.addEventListener("click", () => closeMobileAboutTags());
 
 function connectDetailScrollbar(scrollbar, scroller, axis) {
   const thumb = scrollbar.querySelector("span");
