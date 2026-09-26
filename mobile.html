@@ -4,9 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Gezi Portfolio — Mobile</title>
+  <script>document.documentElement.classList.add("is-loading");</script>
+  <link rel="stylesheet" href="./loader.css" />
+  <script src="./loader.js" defer></script>
   <link rel="stylesheet" href="./mobile.css" />
 </head>
 <body>
+  <div class="site-loader" data-site-loader role="status" aria-live="polite" aria-label="Loading website">
+    <div class="site-loader-window">
+      <div class="site-loader-titlebar">GE://PORTFOLIO</div>
+      <div class="site-loader-content">
+        <p>LOADING...</p>
+        <div class="site-loader-track" aria-hidden="true"><span></span></div>
+      </div>
+    </div>
+  </div>
   <main class="phone-shell is-home">
     <header class="phone-statusbar" aria-label="Phone status">
       <div class="phone-status-left">
